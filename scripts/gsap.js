@@ -225,4 +225,37 @@ document.addEventListener("DOMContentLoaded", () => {
       start: "top 85%",
     },
   });
+
+// ========Popup form ========
+
+   const queryBtns = document.querySelectorAll('.query_form');
+  const popupOverlay = document.getElementById('popupFormOverlay');
+  const popupBox = document.getElementById('popupFormBox');
+  const popupClose = document.getElementById('popupCloseBtn');
+
+  queryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      popupOverlay.classList.remove('hidden');
+      gsap.fromTo(popupBox, { scale: 0.9, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "power2.out" });
+    });
+  });
+
+  popupClose.addEventListener('click', () => {
+    gsap.to(popupBox, {
+      scale: 0.9,
+      opacity: 0,
+      duration: 0.3,
+      ease: "power2.in",
+      onComplete: () => {
+        popupOverlay.classList.add('hidden');
+      }
+    });
+  });
+
+  // Close on click outside
+  popupOverlay.addEventListener('click', (e) => {
+    if (e.target === popupOverlay) {
+      popupClose.click();
+    }
+  });
 });

@@ -7,6 +7,54 @@
     <link rel="stylesheet" href="/styles/style.css" />
   </head>
   <body>
+    <div
+      id="popupFormOverlay"
+      class="fixed inset-0 flex bg-[#000000a6] z-[999] hidden items-center justify-center"
+    >
+      <!-- Popup Box -->
+      <div
+        id="popupFormBox"
+        class="bg-white w-full sm:w-[450px] rounded-xl p-6 relative opacity-0 scale-90"
+      >
+        <!-- Close Button -->
+        <button
+          id="popupCloseBtn"
+          class="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl leading-none"
+        >
+          &times;
+        </button>
+
+        <h3 class="text-xl text-center font-semibold mb-4">Book Your Dream Home</h3>
+        <form class="space-y-4">
+          <input
+            type="text"
+            placeholder="Full Name"
+            class="w-full border px-4 py-2 rounded-md outline-none"
+          />
+          <input
+            type="tel"
+            placeholder="Mobile Number"
+            class="w-full border px-4 py-2 rounded-md outline-none"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            class="w-full border px-4 py-2 rounded-md outline-none"
+          />
+          <textarea
+            placeholder="Message (Optional)"
+            class="w-full border px-4 py-2 rounded-md resize-none outline-none"
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-[#1e2939] text-white px-6 py-2 rounded-md w-full hover:bg-[#1a273b] transition"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
     <section class="home_section d_container" id="home">
       <main class="home_main relative w-full">
         <header
@@ -21,7 +69,7 @@
 
           <nav
             id="sideNav"
-            class="fixed top-0 left-0 w-full sm:w-[25%] sm:min-w-[300px] bg-white py-8 px-4 flex flex-col h-full min-h-screen gap-12 drop-shadow-[5px_0_10px_rgba(0,0,0,0.1)] z-99"
+            class="fixed top-0 left-0 w-full sm:w-[25%] bg-white py-8 px-4 flex flex-col h-full min-h-screen gap-12 drop-shadow-[5px_0_10px_rgba(0,0,0,0.1)] z-99"
           >
             <button
               id="closeButton"
@@ -45,21 +93,22 @@
             </ul>
 
             <button
-              class="cta_nav cursor-pointer text-white bg-[#0a3c5d] px-4 py-2 rounded-full"
+              class="cta_nav query_form cursor-pointer text-white bg-[#0a3c5d] px-4 py-2 rounded-full"
             >
               Enquire Now
             </button>
           </nav>
         </header>
         <div class="home_banner">
-          <img class="w-full" src="/images/eldeco_banner_desktop.jpg" alt="" />
+          <img class="w-full hidden md:block" src="/images/eldeco_banner_desktop.jpg" alt="" />
+          <img class="w-full mt-10 block md:hidden" src="/images/eldeco_banner_mobile.jpg" alt="" />
         </div>
       </main>
     </section>
 
     <section
       id="about"
-      class="flex flex-col md:flex-row items-center bg-white px-4 py-20 max-w-6xl mx-auto gap-10"
+      class="flex flex-col md:flex-row items-center bg-white py-10! d_container gap-10"
     >
       <!-- Left: Image container (trigger for scroll) -->
       <div
@@ -68,7 +117,7 @@
       >
         <img
           id="about-image"
-          src="/images/eldeco_banner_mobile.jpg"
+          src="/images/ABOUT_ELDECO.jpg"
           alt="About image"
           class="w-full scale-75"
           style="transform-origin: center center"
@@ -88,18 +137,15 @@
           address.
         </p>
         <button
-          class="inline-flex items-center gap-2 bg-[#1e2939] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1a273b] transition-colors duration-300 focus:outline-none focus:ring-4 cursor-pointer focus:ring-blue-300 mt-4"
+          class="inline-flex items-center query_form gap-2 bg-[#1e2939] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1a273b] transition-colors duration-300 focus:outline-none focus:ring-4 cursor-pointer focus:ring-blue-300 mt-4"
         >
           Know More About Eldeco
         </button>
       </div>
     </section>
-    <section
-      id="amenities"
-      class="bg-gray-50 py-16 px-6 md:px-12 max-w-7xl mx-auto"
-    >
+    <section id="amenities" class="d_container">
       <h2
-        class="text-3xl md:text-4xl font-extrabold mb-10 text-gray-900 flex items-center gap-3"
+        class="text-2xl md:text-4xl font-bold mb-10 text-gray-900 flex items-center gap-3"
       >
         <span class="text-4xl"></span>
         AMENITIES, FEATURES & BENEFITS
@@ -165,20 +211,17 @@
 
       <div class="mt-12 text-center">
         <button
-          class="inline-flex items-center gap-2 bg-[#1e2939] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1a273b] transition-colors duration-300 focus:outline-none focus:ring-4 cursor-pointer focus:ring-blue-300"
+          class="inline-flex items-center query_form gap-2 bg-[#1e2939] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1a273b] transition-colors duration-300 focus:outline-none focus:ring-4 cursor-pointer focus:ring-blue-300"
         >
           Explore All Amenities
         </button>
       </div>
     </section>
 
-    <section
-      id="floor-plans"
-      class="bg-white py-16 px-6 md:px-12 max-w-6xl mx-auto"
-    >
+    <section id="floor-plans" class="bg-white py-10! d_container">
       <div class="mb-12 max-w-xl">
         <h2
-          class="flex items-center gap-3 text-3xl md:text-4xl font-extrabold text-gray-900"
+          class="flex items-center gap-3 text-2xl md:text-4xl font-bold text-gray-900"
         >
           <span class="text-4xl"></span> FLOOR PLANS
         </h2>
@@ -278,13 +321,10 @@
       </p>
     </section>
 
-    <section
-      id="gallery"
-      class="py-16 px-6 md:px-12 bg-white max-w-6xl mx-auto"
-    >
+    <section id="gallery" class="d_container">
       <div class="mb-12 max-w-xl">
         <h2
-          class="flex items-center gap-3 text-3xl md:text-4xl font-extrabold text-gray-900"
+          class="flex items-center gap-3 text-2xl md:text-4xl font-bold text-gray-900"
         >
           <span class="text-4xl"></span> GALLERY
         </h2>
@@ -331,13 +371,10 @@
         </button>
       </div>
     </section>
-    <section
-      id="location"
-      class="py-16 px-6 md:px-12 bg-gray-50 max-w-6xl mx-auto"
-    >
+    <section id="location" class="py-10! d_container">
       <div class="mb-12 max-w-xl">
         <h2
-          class="flex items-center gap-3 text-3xl md:text-4xl font-extrabold text-gray-900"
+          class="flex items-center gap-3 text-2xl md:text-4xl font-bold text-gray-900"
         >
           <span class="text-4xl"></span> LOCATION ADVANTAGE – SECTOR 22D, YAMUNA
           EXPRESSWAY
@@ -398,13 +435,10 @@
     </section>
 
     <!-- CONTACT US SECTION -->
-    <section
-      id="contact"
-      class="py-20 px-6 md:px-12 bg-white max-w-7xl mx-auto"
-    >
+    <section id="contact" class="d_container pb-6!">
       <div class="mb-10 max-w-2xl">
         <h2
-          class="flex items-center gap-3 text-3xl md:text-4xl font-extrabold text-gray-900"
+          class="flex items-center gap-3 text-2xl md:text-4xl font-bold text-gray-900"
         >
           CONTACT US – CLAIM YOUR BLISSFUL ADDRESS TODAY
         </h2>
@@ -448,15 +482,7 @@
               placeholder="Email"
               class="w-full p-3 border border-gray-300 focus:outline-blue-500"
             />
-            <select
-              class="w-full p-3 border border-gray-300 focus:outline-blue-500"
-            >
-              <option>Select Unit Type</option>
-              <option>1 BHK</option>
-              <option>2 BHK</option>
-              <option>3 BHK</option>
-              <option>Studio</option>
-            </select>
+           
             <textarea
               placeholder="Message (Optional)"
               rows="3"
@@ -482,7 +508,7 @@
     <!-- FOOTER SECTION -->
     <footer
       id="footer"
-      class="bg-white text-[#101214] px-6 md:px-12 pt-16 pb-10 shadow-[0_-4px_10px_rgba(0,0,0,0.1)]"
+      class="d_container text-[#101214] px-6 md:px-12 pt-16! pb-8! shadow-[0_-4px_10px_rgba(0,0,0,0.1)]"
     >
       <div
         class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"

@@ -1,3 +1,7 @@
+body{
+  overflow-x: hidden;
+}
+
 .d_container{
   max-width: 1336px;
   margin: auto;
