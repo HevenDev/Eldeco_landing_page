@@ -1,7 +1,9 @@
 body{
   overflow-x: hidden;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 .d_container{
   max-width: 1336px;
   margin: auto;
