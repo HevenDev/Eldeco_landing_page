@@ -27,33 +27,17 @@
         <h3 class="text-xl text-center font-semibold mb-4">
           Book Your Dream Home
         </h3>
-        <form class="space-y-4">
-          <input
-            type="text"
-            placeholder="Full Name"
-            class="w-full border px-4 py-2 rounded-md outline-none"
-          />
-          <input
-            type="tel"
-            placeholder="Mobile Number"
-            class="w-full border px-4 py-2 rounded-md outline-none"
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            class="w-full border px-4 py-2 rounded-md outline-none"
-          />
-          <textarea
-            placeholder="Message (Optional)"
-            class="w-full border px-4 py-2 rounded-md resize-none outline-none"
-          ></textarea>
-          <button
-            type="submit"
-            class="bg-[#1e2939] cursor-pointer text-white px-6 py-2 rounded-md w-full hover:bg-[#1a273b] transition"
-          >
-            Submit
-          </button>
-        </form>
+       <form id="contactForm" class="space-y-4">
+  <input name="name" type="text" placeholder="Full Name" class="w-full border px-4 py-2 rounded-md outline-none" required />
+  <input name="contact" type="tel" placeholder="Mobile Number" class="w-full border px-4 py-2 rounded-md outline-none" required />
+  <input name="email" type="email" placeholder="Email" class="w-full border px-4 py-2 rounded-md outline-none" required />
+  <textarea name="message" placeholder="Message (Optional)" class="w-full border px-4 py-2 rounded-md resize-none outline-none"></textarea>
+  <button id="contactBtn" type="submit" class="bg-[#1e2939] cursor-pointer text-white px-6 py-2 rounded-md w-full hover:bg-[#1a273b] transition">
+    Submit
+  </button>
+  <p id="contactStatus" class="text-sm hidden"></p>
+</form>
+
       </div>
     </div>
 
@@ -463,42 +447,18 @@
             Schedule Your Private Consultation Now – Before Pre-Launch Offers
             Expire!
           </h3>
-          <form class="space-y-4">
-            <input
-              type="text"
-              placeholder="Full Name"
-              class="w-full p-3 border border-gray-300 focus:outline-blue-500"
-            />
-            <input
-              type="tel"
-              placeholder="Mobile Number"
-              class="w-full p-3 border border-gray-300 focus:outline-blue-500"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              class="w-full p-3 border border-gray-300 focus:outline-blue-500"
-            />
-
-            <textarea
-              placeholder="Message (Optional)"
-              rows="3"
-              class="w-full p-3 border border-gray-300 focus:outline-blue-500"
-            ></textarea>
-
-            <div class="flex flex-col gap-3 mt-4">
-              <button
-                class="query_form cursor-pointer bg-[#1e2939] text-white px-4 py-3 font-semibold hover:bg-[#1a273b] transition-all duration-300"
-              >
-                Book Your Dream Home
-              </button>
-              <button
-                class="query_form cursor-pointer bg-gray-800 text-white px-4 py-3 font-semibold hover:bg-gray-900 transition-all duration-300"
-              >
-                Talk to Our Expert Now
-              </button>
-            </div>
-          </form>
+         <form id="expertForm" class="space-y-4">
+  <input name="name" type="text" placeholder="Full Name" class="w-full p-3 border border-gray-300 focus:outline-blue-500" required />
+  <input name="contact" type="tel" placeholder="Mobile Number" class="w-full p-3 border border-gray-300 focus:outline-blue-500" required />
+  <input name="email" type="email" placeholder="Email" class="w-full p-3 border border-gray-300 focus:outline-blue-500" required />
+  <textarea name="message" placeholder="Message (Optional)" rows="3" class="w-full p-3 border border-gray-300 focus:outline-blue-500"></textarea>
+  <div class="flex flex-col gap-3 mt-4">
+    <button id="expertBtn" type="submit" class="cursor-pointer bg-gray-800 text-white px-4 py-3 font-semibold hover:bg-gray-900 transition-all duration-300">
+      Talk to Our Expert Now
+    </button>
+    <p id="expertStatus" class="text-sm hidden"></p>
+  </div>
+</form>
         </div>
       </div>
     </section>
