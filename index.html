@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eldeco</title>
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <div
@@ -19,12 +19,14 @@
         <!-- Close Button -->
         <button
           id="popupCloseBtn"
-          class="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl leading-none"
+          class="absolute cursor-pointer top-3 right-4 text-gray-500 hover:text-red-500 text-2xl leading-none"
         >
           &times;
         </button>
 
-        <h3 class="text-xl text-center font-semibold mb-4">Book Your Dream Home</h3>
+        <h3 class="text-xl text-center font-semibold mb-4">
+          Book Your Dream Home
+        </h3>
         <form class="space-y-4">
           <input
             type="text"
@@ -47,7 +49,7 @@
           ></textarea>
           <button
             type="submit"
-            class="bg-[#1e2939] text-white px-6 py-2 rounded-md w-full hover:bg-[#1a273b] transition"
+            class="bg-[#1e2939] cursor-pointer text-white px-6 py-2 rounded-md w-full hover:bg-[#1a273b] transition"
           >
             Submit
           </button>
@@ -79,7 +81,7 @@
             </button>
 
             <div class="logo w-32">
-              <img src="/images/eledeco_logo.png" alt="eledeco_logo" />
+              <img src="images/eledeco_logo.png" alt="eledeco_logo" />
             </div>
 
             <ul class="nav_ul flex flex-col gap-4 text-m py-2 px-4">
@@ -100,8 +102,16 @@
           </nav>
         </header>
         <div class="home_banner">
-          <img class="w-full hidden md:block" src="/images/eldeco_banner_desktop.jpg" alt="" />
-          <img class="w-full mt-10 block md:hidden" src="/images/eldeco_banner_mobile.jpg" alt="" />
+          <img
+            class="w-full hidden md:block"
+            src="images/eldeco_banner_desktop.jpg"
+            alt=""
+          />
+          <img
+            class="w-full mt-10 block md:hidden"
+            src="images/eldeco_banner_mobile.jpg"
+            alt=""
+          />
         </div>
       </main>
     </section>
@@ -117,7 +127,7 @@
       >
         <img
           id="about-image"
-          src="/images/ABOUT_ELDECO.jpg"
+          src="images/ABOUT_ELDECO.jpg"
           alt="About image"
           class="w-full scale-75"
           style="transform-origin: center center"
@@ -125,7 +135,7 @@
       </div>
 
       <!-- Right: Text content -->
-      <div class="flex-1 text-left ">
+      <div class="flex-1 text-left">
         <h2 id="animate-heading" class="text-4xl font-bold mb-4 text-gray-400">
           About Us
         </h2>
@@ -156,7 +166,7 @@
         <div
           class="amenity-card bg-white p-6 rounded-xl shadow-lg flex flex-col space-y-4 cursor-pointer hover:shadow-2xl transition-shadow duration-300"
         >
-          <div class="text-4xl">🏰</div>
+          <img src="" alt="">
           <h3 class="text-xl font-semibold text-gray-900">Luxury Amenities</h3>
           <p class="text-gray-600">
             Clubhouse, Half Olympic-size Swimming Pool, Spa, Party Hall, Pet
@@ -219,7 +229,7 @@
     </section>
 
     <section id="floor-plans" class="bg-white py-10! d_container">
-      <div class="mb-12 ">
+      <div class="mb-12">
         <h2
           class="flex items-center gap-3 text-2xl md:text-4xl font-bold text-gray-900"
         >
@@ -251,7 +261,7 @@
               </span>
               <button
                 type="button"
-                class="query_form inline-flex bg-[#1e2939] text-white font-semibold px-5 py-2 rounded-md hover:bg-[#1a273b] transition-colors duration-300 items-center gap-2"
+                class="query_form cursor-pointer inline-flex bg-[#1e2939] text-white font-semibold px-5 py-2 rounded-md hover:bg-[#1a273b] transition-colors duration-300 items-center gap-2"
               >
                 Request Floor Plan & Pricing Details
               </button>
@@ -278,7 +288,7 @@
               </span>
               <button
                 type="button"
-                class="query_form inline-flex bg-[#1e2939] text-white font-semibold px-5 py-2 rounded-md hover:bg-[#1a273b] transition-colors duration-300 items-center gap-2"
+                class="query_form cursor-pointer inline-flex bg-[#1e2939] text-white font-semibold px-5 py-2 rounded-md hover:bg-[#1a273b] transition-colors duration-300 items-center gap-2"
               >
                 Request Floor Plan & Pricing Details
               </button>
@@ -305,7 +315,7 @@
               </span>
               <button
                 type="button"
-                class="query_form inline-flex bg-[#1e2939] text-white font-semibold px-5 py-2 rounded-md hover:bg-[#1a273b] transition-colors duration-300 items-center gap-2"
+                class="query_form cursor-pointer inline-flex bg-[#1e2939] text-white font-semibold px-5 py-2 rounded-md hover:bg-[#1a273b] transition-colors duration-300 items-center gap-2"
               >
                 Request Floor Plan & Pricing Details
               </button>
@@ -314,7 +324,7 @@
         </li>
       </ul>
 
-      <p class="mt-12  text-gray-600 text-lg leading-relaxed">
+      <p class="mt-12 text-gray-600 text-lg leading-relaxed">
         Enjoy three-side open units, running balconies, natural light, and
         well-ventilated layouts that offer stunning green views and a
         clutter-free living experience.
@@ -363,14 +373,14 @@
 
       <div class="mt-10 text-center">
         <button
-          class="query_form px-6 py-3 bg-[#1e2939] text-white text-lg font-semibold hover:bg-[#1a273b] transition-all duration-300"
+          class="query_form cursor-pointer px-6 py-3 bg-[#1e2939] text-white text-lg font-semibold hover:bg-[#1a273b] transition-all duration-300"
         >
           Book a Site Visit
         </button>
       </div>
     </section> -->
     <section id="location" class="py-10! d_container">
-      <div class="mb-12 ">
+      <div class="mb-12">
         <h2
           class="flex items-center gap-3 text-2xl md:text-4xl font-bold text-gray-900"
         >
@@ -386,30 +396,28 @@
           class="space-y-4 text-gray-800 text-lg md:flex-1"
         >
           <li class="flex items-start gap-2">
-            
-            •	 Near Proposed Metro Line (YEIDA)
+            • Near Proposed Metro Line (YEIDA)
           </li>
           <li class="flex items-start gap-2">
-            •	 Close to Jewar International Airport
+            • Close to Jewar International Airport
           </li>
           <li class="flex items-start gap-2">
-            •	 Minutes from Proposed Noida Film City
+            • Minutes from Proposed Noida Film City
           </li>
           <li class="flex items-start gap-2">
-            •	 Seamless Access to Pari Chowk, Sector 150,
-            Noida-Greater Noida Expressway
+            • Seamless Access to Pari Chowk, Sector 150, Noida-Greater Noida
+            Expressway
           </li>
           <li class="flex items-start gap-2">
-            •	Near top schools, hospitals, malls & entertainment hubs
+            • Near top schools, hospitals, malls & entertainment hubs
           </li>
           <li class="flex items-start gap-2">
-            •	
-             Easy access to IGI Airport via Noida Expressway
+            • Easy access to IGI Airport via Noida Expressway
           </li>
 
           <li class="mt-6">
             <button
-              class="query_form px-5 py-3 bg-[#1e2939] text-white font-semibold hover:bg-[#1a273b] transition-all duration-300"
+              class="query_form px-5 cursor-pointer py-3 bg-[#1e2939] text-white font-semibold hover:bg-[#1a273b] transition-all duration-300"
             >
               Explore Neighbourhood Map
             </button>
@@ -418,7 +426,7 @@
 
         <!-- Right: Embedded Map -->
         <div id="location-map" class="w-full md:w-1/2 shadow-lg">
-          <img src="/images/LOCATION_MAP.jpg" alt="" class="w-full">
+          <img src="images/LOCATION_MAP.jpg" alt="" class="w-full" />
         </div>
       </div>
     </section>
@@ -471,7 +479,7 @@
               placeholder="Email"
               class="w-full p-3 border border-gray-300 focus:outline-blue-500"
             />
-           
+
             <textarea
               placeholder="Message (Optional)"
               rows="3"
@@ -480,12 +488,12 @@
 
             <div class="flex flex-col gap-3 mt-4">
               <button
-                class="query_form bg-[#1e2939] text-white px-4 py-3 font-semibold hover:bg-[#1a273b] transition-all duration-300"
+                class="query_form cursor-pointer bg-[#1e2939] text-white px-4 py-3 font-semibold hover:bg-[#1a273b] transition-all duration-300"
               >
                 Book Your Dream Home
               </button>
               <button
-                class="query_form bg-gray-800 text-white px-4 py-3 font-semibold hover:bg-gray-900 transition-all duration-300"
+                class="query_form cursor-pointer bg-gray-800 text-white px-4 py-3 font-semibold hover:bg-gray-900 transition-all duration-300"
               >
                 Talk to Our Expert Now
               </button>
@@ -504,7 +512,7 @@
       >
         <!-- Logo & About -->
         <div id="footer-logo">
-          <img src="/images/eledeco_logo.png" alt="Logo" class="h-12 mb-4" />
+          <img src="images/eledeco_logo.png" alt="Logo" class="h-12 mb-4" />
           <p class="text-zinc-900 text-sm leading-relaxed">
             Discover luxury living in the heart of Yamuna Expressway. Premium
             units, world-class amenities, and unmatched connectivity await you
@@ -566,7 +574,7 @@
         <div id="footer-cta" class="flex flex-col gap-5">
           <h3 class="text-lg font-semibold mb-2">Looking for BHK Options?</h3>
           <button
-            class="query_form bg-[#1e2939] text-white py-3 px-5 font-semibold hover:bg-[#1a273b] transition-all duration-300 w-fit"
+            class="query_form cursor-pointer bg-[#1e2939] text-white py-3 px-5 font-semibold hover:bg-[#1a273b] transition-all duration-300 w-fit"
           >
             Enquire BHK Availability
           </button>
@@ -592,10 +600,10 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="/scripts/script.js"></script>
+    <script src="scripts/script.js"></script>
 
     <script></script>
 
-    <script src="/scripts/gsap.js"></script>
+    <script src="scripts/gsap.js"></script>
   </body>
 </html>
