@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const endpoint =
-    "https://script.google.com/macros/s/AKfycbzlMC5NFZMjfh8FTadRYIex-MguiSoNZ4qzImg6B_Wqyfcii4zyioPy70PM4q4PWO580g/exec";
+    "https://script.google.com/macros/s/AKfycbyhoUOhgEcRgvScZEaW-7iZdsIE1on-wW0hx8zZDbDlC9eB229FVOKry2HAfANbAfJI/exec";
 
   function handleFormSubmit(formId, btnId, statusId) {
     const form = document.getElementById(formId);
@@ -151,16 +151,8 @@ document.addEventListener("DOMContentLoaded", () => {
           btn.textContent = "Submitted!";
           closePopup(); // Closes form popup
 
-          setTimeout(() => {
-            document
-              .getElementById("thankYouOverlay")
-              .classList.remove("hidden");
-            gsap.fromTo(
-              "#thankYouBox",
-              { scale: 0.9, opacity: 0 },
-              { scale: 1, opacity: 1, duration: 0.4, ease: "power2.out" }
-            );
-          }, 2000);
+         window.location.href = "thankyou.html";
+
         } else {
           throw new Error("Form submission failed.");
         }
