@@ -40,7 +40,62 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-const endpoint = "https://script.google.com/macros/s/AKfycbzlMC5NFZMjfh8FTadRYIex-MguiSoNZ4qzImg6B_Wqyfcii4zyioPy70PM4q4PWO580g/exec";
+  // ========Popup form ========
+  document.getElementById("thankYouOkayBtn").addEventListener("click", () => {
+    window.location.reload();
+  });
+  const queryBtns = document.querySelectorAll(".query_form");
+  const popupOverlay = document.getElementById("popupFormOverlay");
+  const popupBox = document.getElementById("popupFormBox");
+  const popupClose = document.getElementById("popupCloseBtn");
+
+  // Function to open popup with animation
+  function openPopup() {
+    popupOverlay.classList.remove("hidden");
+    gsap.fromTo(
+      popupBox,
+      { scale: 0.9, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 0.4, ease: "power2.out" }
+    );
+  }
+
+  // Function to close popup with animation
+  function closePopup() {
+    gsap.to(popupBox, {
+      scale: 0.9,
+      opacity: 0,
+      duration: 0.3,
+      ease: "power2.in",
+      onComplete: () => {
+        popupOverlay.classList.add("hidden");
+      },
+    });
+  }
+
+  // Open popup on button click
+  queryBtns.forEach((btn) => {
+    btn.addEventListener("click", openPopup);
+  });
+
+  // Close popup on close button click
+  popupClose.addEventListener("click", closePopup);
+
+  // Close popup on clicking outside popup box
+  popupOverlay.addEventListener("click", (e) => {
+    if (e.target === popupOverlay) {
+      closePopup();
+    }
+  });
+
+  // Show popup automatically after 7 seconds, only once per user
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      openPopup();
+    }, 7000);
+  });
+
+  const endpoint =
+    "https://script.google.com/macros/s/AKfycbzlMC5NFZMjfh8FTadRYIex-MguiSoNZ4qzImg6B_Wqyfcii4zyioPy70PM4q4PWO580g/exec";
 
   function handleFormSubmit(formId, btnId, statusId) {
     const form = document.getElementById(formId);
@@ -94,8 +149,17 @@ const endpoint = "https://script.google.com/macros/s/AKfycbzlMC5NFZMjfh8FTadRYIe
           status.classList.remove("hidden");
           form.reset();
           btn.textContent = "Submitted!";
+          closePopup(); // Closes form popup
+
           setTimeout(() => {
-            window.location.reload();
+            document
+              .getElementById("thankYouOverlay")
+              .classList.remove("hidden");
+            gsap.fromTo(
+              "#thankYouBox",
+              { scale: 0.9, opacity: 0 },
+              { scale: 1, opacity: 1, duration: 0.4, ease: "power2.out" }
+            );
           }, 2000);
         } else {
           throw new Error("Form submission failed.");
@@ -108,7 +172,8 @@ const endpoint = "https://script.google.com/macros/s/AKfycbzlMC5NFZMjfh8FTadRYIe
       } finally {
         setTimeout(() => {
           btn.disabled = false;
-          btn.textContent = formId === "contactForm" ? "Submit" : "Talk to Our Expert Now";
+          btn.textContent =
+            formId === "contactForm" ? "Submit" : "Talk to Our Expert Now";
         }, 3000);
       }
     });
